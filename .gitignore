@@ -1,0 +1,8 @@
+# Ignore all executable application files
+*.exe
+
+# Ignore the VS Code configuration folder
+.vscode/
+
+# Ignore all JSON files
+*.json
