@@ -1,20 +1,31 @@
 #include <iostream>
-
+#include <limits>
 using namespace std;
 
 int main() {
     int x, y;
+
     cout << "What's x? ";
-    cin >> x;
+    while (!(cin >> x)) {
+        cout << "enter a valid integer for x: ";
+        cin.clear(); // reset the fail state
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard bad input
+    }
+
     cout << "What's y? ";
-    cin >> y;
+    while (!(cin >> y)) {
+        cout << "enter a valid integer for y: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
 
     if (x < y) {
         cout << "x is less than y\n";
     } else if (x > y) {
         cout << "x is greater than y\n";
-    } else /*not elif to save resources ( only condition left) as in video*/{
+    } else {
         cout << "x is equal to y\n";
     }
+
     return 0;
 }

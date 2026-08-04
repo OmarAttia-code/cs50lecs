@@ -8,7 +8,13 @@ int main() {
     cin >> x;
     cout << "What's y? ";
     cin >> y;
+    if (y == 0) {
+        cout << "Error: Cannot divide by zero.\n";
+    } else {
+       
+        cout << static_cast<float>(x) / y << "\n";
+    }
 
-    cout << static_cast<float>(x) / y << "\n";// bits problem 
+   
     return 0;
 }
