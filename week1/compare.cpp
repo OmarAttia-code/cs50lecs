@@ -8,7 +8,7 @@ int main() {
     cout << "What's x? ";
     while (!(cin >> x)) {
         cout << "enter a valid integer for x: ";
-        cin.clear(); // reset the fail state
+        cin.clear(); 
         cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard bad input
     }
 
