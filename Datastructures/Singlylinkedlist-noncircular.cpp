@@ -2,24 +2,25 @@
 
 using namespace std;
 
-struct Node {
-    int data;
-    Node* next;
-};
-
 class LinkedList {
 private:
+    struct Node {
+        int data;
+        Node* next;
+    };
+    
     Node* head;
 
 public:
     LinkedList() { // constructor
         head = nullptr;
     }
-     ~LinkedList() {// destructor free memory
-    while (head != nullptr) {
-        deleteFirst();
+    
+    ~LinkedList() {// destructor free memory
+        while (head != nullptr) {
+            deleteFirst();
+        }
     }
-}
 
     void insertFirst(int val) {
         Node* newNode = new Node{val, nullptr};
@@ -32,7 +33,6 @@ public:
         newNode->next = head;
         head = newNode;
     }
-   
 
     void insertLast(int val) {
         Node* newNode = new Node{val, nullptr};
