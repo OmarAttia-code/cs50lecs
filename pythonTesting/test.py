@@ -1,4 +1,4 @@
-from cs50 import SQL
+from cs50 import SQL #cs 50 library
 
 db = SQL("sqlite:///shows.db")
 
